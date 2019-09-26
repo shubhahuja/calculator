@@ -11,6 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
+    text =""
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(697, 599)
@@ -188,6 +189,30 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
+        self.num1.clicked.connect(self.button1)
+        self.num2.clicked.connect(self.button2)
+        self.num3.clicked.connect(self.button3)
+        self.num4.clicked.connect(self.button4)
+        self.num5.clicked.connect(self.button5)
+        self.num6.clicked.connect(self.button6)
+        self.num7.clicked.connect(self.button7)
+        self.num8.clicked.connect(self.button8)
+        self.num9.clicked.connect(self.button9)
+        self.num0.clicked.connect(self.button0)
+        
+        self.addop.clicked.connect(self.buttonadd)
+        self.multop.clicked.connect(self.buttonmult)
+        self.subop.clicked.connect(self.buttonsub)
+        self.divop.clicked.connect(self.buttondiv)
+        self.powop.clicked.connect(self.buttonpow)
+        self.sqop.clicked.connect(self.buttonsq)
+        self.rightb.clicked.connect(self.buttonrig)
+
+        self.leftb.clicked.connect(self.buttonlef)
+
+
+    
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -212,6 +237,78 @@ class Ui_MainWindow(object):
         self.rightb.setText(_translate("MainWindow", ")"))
         self.label.setText(_translate("MainWindow", "0"))
 
+
+    def button1(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"1"
+        self.label.setText(Ui_MainWindow.text)
+
+
+    def button2(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"2"
+        self.label.setText(Ui_MainWindow.text)
+
+    def button3(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"3"
+        self.label.setText(Ui_MainWindow.text)
+
+    def button4(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"4"
+        self.label.setText(Ui_MainWindow.text)
+
+    def button5(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"5"
+        self.label.setText(Ui_MainWindow.text)
+
+    def button6(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"6"
+        self.label.setText(Ui_MainWindow.text)
+
+    def button7(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"7"
+        self.label.setText(Ui_MainWindow.text)
+
+    def button8(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"8"
+        self.label.setText(Ui_MainWindow.text)
+
+    def button9(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"9"
+        self.label.setText(Ui_MainWindow.text)
+
+    def button0(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+"0"
+        self.label.setText(Ui_MainWindow.text)
+
+    def buttonadd(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+" + "
+        self.label.setText(Ui_MainWindow.text)
+
+    def buttonsub(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+" - "
+        self.label.setText(Ui_MainWindow.text)
+
+    def buttonmult(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+" * "
+        self.label.setText(Ui_MainWindow.text)
+
+    def buttondiv(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+" / "
+        self.label.setText(Ui_MainWindow.text)
+
+    def buttonpow(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+" ** "
+        self.label.setText(Ui_MainWindow.text)
+
+    def buttonsq(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+" sqrt "
+        self.label.setText(Ui_MainWindow.text)
+        
+    def buttonlef(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+" ( "
+        self.label.setText(Ui_MainWindow.text)
+    def buttonrig(self):
+        Ui_MainWindow.text=Ui_MainWindow.text+" ) "
+        self.label.setText(Ui_MainWindow.text)
 
 if __name__ == "__main__":
     import sys
